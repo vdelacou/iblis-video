@@ -1,0 +1,63 @@
+{
+  "layouts": {
+    "HeaderLayout": {
+      "getSettingsHeaderMenu": {
+        "activeUsers": "Active Users",
+        "disabledUsers": "Disabled Users"
+      },
+      "useGetUserHeaderMenu": {
+        "settings": "Settings",
+        "logout": "Log out"
+      },
+      "useGetHeaderMenu": {
+        "getHeaderTitle": {
+          "dashboard": "Dashboard",
+          "users": "Users"
+        }
+      }
+    },
+    "NavigatorLayout": {
+      "getDashboardMenu": {
+        "categoryName": "Dashboard",
+        "menuList": {
+          "sales": "Sales",
+          "analytics": "Analytics"
+        }
+      },
+      "getSettingsMenu": {
+        "categoryName": "Settings",
+        "menuList": {
+          "users": "Users"
+        }
+      },
+      "useGetWorkspace": {
+        "workspaceStatusPaidLabel": "Paid",
+        "workspaceStatusTrialLabel": "Trial",
+        "workspaceStatusUnpaidLabel": "UnPaid"
+      },
+      "Navigator": {
+        "mainTitle": "Iblis",
+        "workspaceSettingsTooltip": "See Workspace Settings"
+      }
+    }
+  },
+  "pages": {
+    "DashbaordAnalytics": {
+      "mainTitle": "Analytics Page"
+    },
+    "DashbaordSales": {
+      "mainTitle": "Sales Page"
+    },
+    "RouteNotFound": {
+      "NotFound": {
+        "mainTitle": "Page Not Found"
+      }
+    },
+    "SettingsUsersActive": {
+      "mainTitle": "Users Active Page"
+    },
+    "SettingsUsersDisabled": {
+      "mainTitle": "Users Disabled Page"
+    }
+  }
+}

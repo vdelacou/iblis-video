@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 import { Box, CircularProgress, Typography } from '@material-ui/core';
 import { MediaConnection } from 'peerjs';
 import React, { FC, useEffect, useRef } from 'react';
@@ -37,8 +38,8 @@ export const JoinRoom: FC = () => {
           <CircularProgress />
         </Typography>
       )}
-      <video style={{ width: '50%' }} ref={videoOthers} autoPlay muted />
-      <video style={{ width: '50%' }} ref={videoMyself} autoPlay muted />
+      <video style={{ width: '50%' }} ref={videoOthers} autoPlay />
+      <video style={{ width: '50%' }} ref={videoMyself} autoPlay />
     </Box>
   );
 };

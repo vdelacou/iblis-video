@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 import { Box, Button, CircularProgress, Typography } from '@material-ui/core';
 import copy from 'copy-to-clipboard';
 import { t } from 'i18n-js';
@@ -67,8 +68,8 @@ export const CreateRoom: FC = () => {
           </Box>
         </>
       )}
-      <video style={{ width: '50%' }} ref={videoOthers} autoPlay muted />
-      <video style={{ width: '50%' }} ref={videoMyself} autoPlay muted />
+      <video style={{ width: '50%' }} ref={videoOthers} autoPlay />
+      <video style={{ width: '50%' }} ref={videoMyself} autoPlay />
     </Box>
   );
 };

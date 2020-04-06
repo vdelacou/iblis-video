@@ -2,9 +2,11 @@
 
 _**Peer to Peer Conference Video Call Service in the browser**_
 
+![Example](./screenshots/iblis-video.gif)
+
 ## Demos
 
-- [online](https://video.adama-development.com)
+- [Try it](https://master.d3p2l1ki2b27cy.amplifyapp.com/create-room)
 
 ## Why
 

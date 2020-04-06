@@ -25,6 +25,8 @@ export const useJoinPeer = (): [Peer | undefined, boolean] => {
     getPeer().then((peerResult) => {
       setPeer(peerResult);
       peerResult.on('error', (error) => {
+        // eslint-disable-next-line no-console
+        console.error('error', error);
         setErrorMessageRef.current(error.message);
       });
     });
@@ -40,6 +42,8 @@ export const useJoinPeer = (): [Peer | undefined, boolean] => {
         setConnected(true);
       });
       conn.on('error', (error) => {
+        // eslint-disable-next-line no-console
+        console.error('error', error);
         setErrorMessageRef.current(error.message);
       });
     }

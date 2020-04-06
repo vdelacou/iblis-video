@@ -22,6 +22,8 @@ export const useCreatePeer = (): [Peer | undefined] => {
     getPeer().then((peerResult) => {
       setPeer(peerResult);
       peerResult.on('error', (error) => {
+        // eslint-disable-next-line no-console
+        console.error('error', error);
         setErrorMessageRef.current(error.message);
       });
     });
@@ -31,6 +33,8 @@ export const useCreatePeer = (): [Peer | undefined] => {
   useEffect(() => {
     if (peer) {
       peer.on('error', (err) => {
+        // eslint-disable-next-line no-console
+        console.error('error', err);
         setErrorMessageRef.current(err.message);
       });
     }

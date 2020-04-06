@@ -6,7 +6,7 @@ _**Peer to Peer Conference Video Call Service in the browser**_
 
 ## Demos
 
-- [Try it](https://master.d3p2l1ki2b27cy.amplifyapp.com/create-room)
+- [Try it](https://iblis-video.now.sh)
 
 ## Why
 

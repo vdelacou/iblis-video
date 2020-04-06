@@ -4,7 +4,6 @@ import { useHistory } from 'react-router';
 import { NavigatorMenuProps } from '../../components/navigator';
 import { WORSPACE_STATUS } from '../../config';
 import { getDashboardMenu } from './dashboard_menu';
-import { getSettingsMenu } from './settings_menu';
 
 /**
  * Get the menu for the user button
@@ -15,7 +14,7 @@ import { getSettingsMenu } from './settings_menu';
 export const useGetMenu = (): [Array<NavigatorMenuProps>] => {
   const history = useHistory();
 
-  const menu = [getDashboardMenu(history), getSettingsMenu(history)];
+  const menu = [getDashboardMenu(history)];
 
   return [menu];
 };

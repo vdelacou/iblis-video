@@ -6,9 +6,9 @@ import { useGetHeaderMenu } from './hooks';
  * The header layout for the app
  */
 export const HeaderLayout: FC<HeaderLayoutProps> = (props) => {
-  const [headerTitle, userMenuProps, subMenuProps] = useGetHeaderMenu();
+  const [headerTitle] = useGetHeaderMenu();
 
-  return <Header headerTitle={headerTitle} toggleNavigator={props.toggleNavigator} userMenuProps={userMenuProps} subMenuProps={subMenuProps} />;
+  return <Header headerTitle={headerTitle} toggleNavigator={props.toggleNavigator} />;
 };
 
 export interface HeaderLayoutProps {

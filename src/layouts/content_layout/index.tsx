@@ -1,12 +1,10 @@
 import { Box } from '@material-ui/core';
 import React, { FC } from 'react';
-import { Route, Switch } from 'react-router';
+import { Redirect, Route, Switch } from 'react-router';
 import { ROUTES } from '../../config/route-config';
-import { DashbaordAnalytics } from '../../pages/dashboard_analytics';
-import { DashbaordSales } from '../../pages/dashboard_sales';
+import { CreateRoom } from '../../pages/create_room';
+import { JoinRoom } from '../../pages/join_room';
 import { RouteNotFound } from '../../pages/route_not_found';
-import { SettingsUsersActive } from '../../pages/settings_users_active';
-import { SettingsUsersDisabled } from '../../pages/settings_users_disabled';
 import { HeaderLayout } from '../header_layout';
 
 /**
@@ -21,18 +19,13 @@ export const ContentLayout: FC<ContentLayoutProps> = (props) => {
       </Box>
       <Box component="main" flex={1}>
         <Switch>
-          <Route exact path={ROUTES.DASHBOARD_SALES}>
-            <DashbaordSales />
+          <Route exact path={ROUTES.CREATE_ROOM}>
+            <CreateRoom />
           </Route>
-          <Route exact path={ROUTES.DASHBOARD_ANALYTICS}>
-            <DashbaordAnalytics />
+          <Route exact path={ROUTES.JOIN_ROOM}>
+            <JoinRoom />
           </Route>
-          <Route exact path={ROUTES.SETTINGS_USER_ACTIVE}>
-            <SettingsUsersActive />
-          </Route>
-          <Route exact path={ROUTES.SETTINGS_USER_DISABLED}>
-            <SettingsUsersDisabled />
-          </Route>
+          <Redirect to={{ pathname: ROUTES.CREATE_ROOM }} />
           {/* For every routes not found */}
           <Route path="*">
             <RouteNotFound />

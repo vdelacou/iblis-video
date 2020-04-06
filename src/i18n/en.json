@@ -1,63 +1,31 @@
 {
   "layouts": {
     "HeaderLayout": {
-      "getSettingsHeaderMenu": {
-        "activeUsers": "Active Users",
-        "disabledUsers": "Disabled Users"
-      },
-      "useGetUserHeaderMenu": {
-        "settings": "Settings",
-        "logout": "Log out"
-      },
       "useGetHeaderMenu": {
         "getHeaderTitle": {
-          "dashboard": "Dashboard",
-          "users": "Users"
+          "dashboard": "One To One Room"
         }
       }
     },
     "NavigatorLayout": {
       "getDashboardMenu": {
-        "categoryName": "Dashboard",
+        "categoryName": "Rooms",
         "menuList": {
-          "sales": "Sales",
-          "analytics": "Analytics"
+          "sales": "Create Room"
         }
-      },
-      "getSettingsMenu": {
-        "categoryName": "Settings",
-        "menuList": {
-          "users": "Users"
-        }
-      },
-      "useGetWorkspace": {
-        "workspaceStatusPaidLabel": "Paid",
-        "workspaceStatusTrialLabel": "Trial",
-        "workspaceStatusUnpaidLabel": "UnPaid"
       },
       "Navigator": {
-        "mainTitle": "Iblis",
-        "workspaceSettingsTooltip": "See Workspace Settings"
+        "mainTitle": "Adama Video"
       }
     }
   },
   "pages": {
-    "DashbaordAnalytics": {
-      "mainTitle": "Analytics Page"
-    },
-    "DashbaordSales": {
-      "mainTitle": "Sales Page"
-    },
-    "RouteNotFound": {
-      "NotFound": {
-        "mainTitle": "Page Not Found"
-      }
-    },
-    "SettingsUsersActive": {
-      "mainTitle": "Users Active Page"
-    },
-    "SettingsUsersDisabled": {
-      "mainTitle": "Users Disabled Page"
+    "CreateRoom": {
+      "copyToClipbaord": {
+        "button": "Copy Link"
+      },
+      "ready": "Your room is ready!",
+      "share": "Please Share the link to see your friend."
     }
   }
 }

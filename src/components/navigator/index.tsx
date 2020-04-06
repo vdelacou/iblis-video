@@ -1,7 +1,6 @@
-import { Box, Divider, Drawer, List, ListItem, ListItemIcon, ListItemText, ListSubheader, makeStyles, Theme, Tooltip, Typography } from '@material-ui/core';
+import { Box, Divider, Drawer, List, ListItem, ListItemIcon, ListItemText, ListSubheader, makeStyles, Theme, Typography } from '@material-ui/core';
 import { fade, useTheme } from '@material-ui/core/styles';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
-import SettingsIcon from '@material-ui/icons/Settings';
 import clsx from 'clsx';
 import React, { FC, Fragment, ReactElement } from 'react';
 
@@ -72,21 +71,6 @@ export const Navigator: FC<NavigatorProps> = (props) => {
             </Typography>
           </ListItem>
           <Divider />
-          <Tooltip title={props.workspaceSettingsTooltip} placement="right">
-            <ListItem button classes={{ button: classes.listItemButton }} onClick={props.workspaceAction}>
-              <ListItemText className={classes.listItemFontColor}>
-                <Typography variant="body2">{props.workspaceTitle}</Typography>
-                <Typography variant="caption">{props.workspaceStatusLabel}</Typography>
-              </ListItemText>
-              <ListItemIcon
-                classes={{ root: classes.listItemIconRoot }}
-                className={clsx(classes.listItemIconRootSettings, props.workspaceMenuActive ? classes.listItemButtonActive : classes.listItemFontColor)}
-              >
-                <SettingsIcon />
-              </ListItemIcon>
-            </ListItem>
-          </Tooltip>
-          <Divider />
         </Box>
         {props.menuListCategory.map(({ categoryName, menuList, activeIndex }) => (
           <Fragment key={categoryName}>
@@ -143,29 +127,9 @@ export interface NavigatorProps {
    */
   mainTitle: string;
   /**
-   * the workspace title
-   */
-  workspaceTitle: string;
-  /**
-   * Workspace Settings Tooltip
-   */
-  workspaceSettingsTooltip: string;
-  /**
-   * Workspace status label
-   */
-  workspaceStatusLabel: string;
-  /**
    * The menu list sort by category
    */
   menuListCategory: Array<NavigatorMenuProps>;
-  /**
-   * If need to show the workspace active
-   */
-  workspaceMenuActive: boolean;
-  /**
-   * The action when click on workspace
-   */
-  workspaceAction: () => void;
 }
 
 export interface NavigatorMenuProps {
